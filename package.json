@@ -1,0 +1,64 @@
+{
+  "name": "@watchtowerobservability/activity-svelte",
+  "version": "0.1.0",
+  "description": "Watchtower hosted activity log: typed Svelte action and component over the <wt-activity> web component",
+  "license": "Apache-2.0",
+  "type": "module",
+  "sideEffects": [
+    "./dist/index.js"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./ActivityLog.svelte": {
+      "types": "./dist/ActivityLog.svelte.d.ts",
+      "svelte": "./dist/ActivityLog.svelte"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && node scripts/copy.mjs",
+    "size": "node scripts/size.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "prepack": "npm run build && npm run size"
+  },
+  "peerDependencies": {
+    "@watchtowerobservability/activity-web": ">=0.1.0",
+    "svelte": ">=4"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.0",
+    "happy-dom": "21.0.4",
+    "svelte": "5.57.3",
+    "typescript": "5.7.2",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watchtowerobservability/watchtower-activity-svelte.git"
+  },
+  "homepage": "https://github.com/watchtowerobservability/watchtower-activity-svelte#readme",
+  "peerDependenciesMeta": {
+    "@watchtowerobservability/activity-web": {
+      "optional": true
+    },
+    "svelte": {
+      "optional": true
+    }
+  },
+  "svelte": "./dist/index.js",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
