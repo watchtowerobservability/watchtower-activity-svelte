@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { compile } from 'svelte/compiler';
 import { describe, expect, it } from 'vitest';
-import { EVENTS, wtActivity, type ActivityEvent } from './index';
+import { EVENTS, wtActivity, type ActivityEvent } from './index.js';
 
 describe('wtActivity (svelte)', () => {
   it('renders the element with attributes, updates and cleans up', () => {

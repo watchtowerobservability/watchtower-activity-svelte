@@ -2,9 +2,9 @@
 import '@watchtowerobservability/activity-web';
 import {
   applyProps, EVENTS, type ActivityErrorDetail, type ActivityEvent, type ActivityLoadDetail, type ActivityLogProps, type WtActivityElement,
-} from './props';
+} from './props.js';
 
-export * from './props';
+export * from './props.js';
 
 /** Props plus event callbacks. */
 export interface ActivityLogOptions extends ActivityLogProps {
